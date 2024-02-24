@@ -1,0 +1,132 @@
+.App {
+  font-family: "Poppins", sans-serif;
+  margin: 20px;
+}
+
+.planets-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.title{
+  background-color: #3C493F;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+h1{
+  margin: 0;
+  margin-left: 15px 
+}
+
+p{
+  font-weight: 500;
+}
+
+.planet-card {
+  width: calc(33.33% - 20px); 
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px #7E8D85;
+  transition: transform 0.3s ease-in-out;
+}
+
+.planet-card:hover {
+  transform: scale(1.04);
+}
+
+.planet {
+  margin-bottom: 20px;
+}
+
+.card-img{
+  border-radius: 10px;
+}
+
+.resident-list {
+  margin-top: 10px;
+
+}
+
+.resident-list button {
+  padding: 8px 16px;
+  background-color: #3C493F;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.resident-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resident-list li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.pagination {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background-color: #50925f;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  font-weight: 500 ;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.pagination button:hover {
+  background-color: #3C493F;
+  transform: scale(1.05);
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.icon-star {
+  animation: flip-horizontal 2s ease infinite;
+}
+
+@keyframes flip-horizontal {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+  .planet-card {
+    width: 500px
+  }
+}
